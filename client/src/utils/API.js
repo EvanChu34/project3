@@ -1,20 +1,29 @@
 import axios from "axios";
 
 export default {
-  // Gets all books
-  getBooks: function() {
-    return axios.get("/api/books");
+  // Gets all lost items
+  getLostItems: function() {
+    return axios.get("/api/lost");
   },
-  // Gets the book with the given id
-  getBook: function(id) {
-    return axios.get("/api/books/" + id);
+  // Gets the lost item with the given id
+  getLostItem: function(id) {
+    return axios.get("/api/lost/" + id);
   },
-  // Deletes the book with the given id
-  deleteBook: function(id) {
-    return axios.delete("/api/books/" + id);
+  // Gets all lost items
+  getFoundItems: function(){
+    return axios.get("/api/found/" + id);
   },
-  // Saves a book to the database
-  saveBook: function(bookData) {
-    return axios.post("/api/books", bookData);
+  // Gets the lost item with the given id
+  getFoundItem: function(){
+    return axios.get("/api/found/" + id);
+  },
+  // Deletes the found item with the given id
+  deleteItem: function(id) {
+    return axios.delete("/api/found/" + id);
+  },
+  // Saves a lost to the database
+  saveItem: function(itemData) {
+    return axios.post("/api/lost", itemData);
   }
+
 };
