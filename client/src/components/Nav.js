@@ -42,7 +42,7 @@ const useStyles = makeStyles(theme=>({
 const menuItems = [
   {
       listIcon: <Signin/>,
-      listText: "Login"
+      listText: "Signin",
   },
   {
       listIcon: <Home/>,
@@ -108,7 +108,7 @@ const sideList = slider => (
                  <Explore style={{ color: "red" }}/>
              </IconButton>
                 <Typography variant="h5" style={{ color: "tan" }}>
-                Finders Keepers!!!
+                FIND IT
                 </Typography>
                 <MobilRightMenuSlider 
                    anchor="right" 
