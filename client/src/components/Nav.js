@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import MobilRightMenuSlider from '@material-ui/core/Drawer';
+import Logo from "./findit?.png";
 
 import { 
     AppBar,  
@@ -34,7 +35,7 @@ const useStyles = makeStyles(theme=>({
       background: "#511",
       height: "30rem"
   },
-  avatar: {
+  logo: {
     display: "block",
     margin: "0.5rem auto",
     width: theme.spacing(13),
@@ -47,22 +48,24 @@ const useStyles = makeStyles(theme=>({
 
 const menuItems = [
   {
-      listIcon: <Login/>,
-      listText: "Home",
+      listIcon: <LockOpen/>,
+      listText: "Login",
       listPath: "/"
   },
   {
       listIcon: <Home/>,
-      listText: "Filler",
-      listPath: "Filler"
+      listText: "Home",
+      listPath: "/Home"
   },
   //{
   //    listIcon: <Filler/>,
-  //    listText: "Filler"
+  //    listText: "Filler",
+  //    listPath: "Filler"
   //},
   //{
   //    listIcon: <Filler/>,
-  //    listText: "Filler"
+  //    listText: "Filler",
+  //    listPath: "Filler"
   //},
 ]
 
@@ -83,7 +86,7 @@ const sideList = slider => (
       className={classes.menuSliderContainer} 
       component="div"
       onClick={toggleSlider(slider, false)}>
-    <Avatar className={classes.avatar} src={avatar} alt="FindIt" />  
+    <Avatar className={classes.logo} src={findit} alt="FindIt" />  
     <Divider />
     <List>
          {menuItems.map((lsItem, key)=>(
