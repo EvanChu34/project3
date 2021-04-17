@@ -1,7 +1,8 @@
 import React from "react";
+import {Route} from 'react-router-dom';
 import './App.css';
 import Form from './components/Form';
-import Nav from './components/Nav';
+import Navbar from './components/Nav';
 import Login from './components/Login';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
@@ -9,11 +10,9 @@ function App() {
   return (
     <>
   <CssBaseline />
-  <Nav />
-   <Login />
-   <Form />
+  <Route path="/" component={Login} />
+  <Route path="/Filler" component={Filler} />
    </>
-   
   );
 }
 
