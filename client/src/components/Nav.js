@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import MobilRightMenuSlider from '@material-ui/core/Drawer';
 
@@ -34,6 +34,12 @@ const useStyles = makeStyles(theme=>({
       background: "#511",
       height: "30rem"
   },
+  avatar: {
+    display: "block",
+    margin: "0.5rem auto",
+    width: theme.spacing(13),
+    height: theme.spacing(13)
+},
   listItem: {
     color: "tan",
   }
@@ -41,12 +47,14 @@ const useStyles = makeStyles(theme=>({
 
 const menuItems = [
   {
-      listIcon: <Signin/>,
-      listText: "Signin",
+      listIcon: <Login/>,
+      listText: "Home",
+      listPath: "/"
   },
   {
       listIcon: <Home/>,
-      listText: "Home"
+      listText: "Filler",
+      listPath: "Filler"
   },
   //{
   //    listIcon: <Filler/>,
@@ -75,26 +83,20 @@ const sideList = slider => (
       className={classes.menuSliderContainer} 
       component="div"
       onClick={toggleSlider(slider, false)}>
-    <Typography variant="h4" style={{ color: "black" }}>
-
-      Placeholder for avatar/logo
-
-    </Typography>
+    <Avatar className={classes.avatar} src={avatar} alt="FindIt" />  
     <Divider />
-      
-      
     <List>
-        {menuItems.map((listItem, key)=>(
-        <ListItem button key={key}>
-          <ListItemIcon className={classes.listItem}>
-            {listItem.listIcon}
-          </ListItemIcon>
-          <ListItemText 
-            className={classes.listItem}
-            primary={listItem.listText}
+         {menuItems.map((lsItem, key)=>(
+      <ListItem button key={key} component={Link} to={lsItem.listPath}>
+        <ListItemIcon className={classes.listItem}>
+          {lsItem.listIcon}
+        </ListItemIcon>
+    <ListItemText 
+          className={classes.listItem}
+          primary={listItem.listText}
           />
-        </ListItem>
-            ))}
+    </ListItem>
+      ))}
     </List>
     </Box>
         )
