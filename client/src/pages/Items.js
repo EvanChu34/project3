@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import DeleteBtn from "../components/DeleteBtn";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 import { Link } from "react-router-dom";
@@ -7,29 +6,29 @@ import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 
-function Books() {
+function Items() {
   // Setting our component's initial state
-  const [books, setBooks] = useState([])
+  const [Items, setItems] = useState([])
   const [formObject, setFormObject] = useState({})
 
-  // Load all books and store them with setBooks
+  // Load all Items and store them with setItems
   useEffect(() => {
-    loadBooks()
+    loadItems()
   }, [])
 
-  // Loads all books and sets them to books
-  function loadBooks() {
-    API.getBooks()
+  // Loads all Items and sets them to Items
+  function loadItems() {
+    API.getItems()
       .then(res => 
-        setBooks(res.data)
+        setItems(res.data)
       )
       .catch(err => console.log(err));
   };
 
-  // Deletes a book from the database with a given id, then reloads books from the db
-  function deleteBook(id) {
-    API.deleteBook(id)
-      .then(res => loadBooks())
+  // Deletes a Item from the database with a given id, then reloads Items from the db
+  function deleteItem(id) {
+    API.deleteItem(id)
+      .then(res => loadItems())
       .catch(err => console.log(err));
   }
 
@@ -39,17 +38,18 @@ function Books() {
     setFormObject({...formObject, [name]: value})
   };
 
-  // When the form is submitted, use the API.saveBook method to save the book data
-  // Then reload books from the database
+  // When the form is submitted, use the API.saveItem method to save the Item data
+  // Then reload Items from the database
   function handleFormSubmit(event) {
     event.preventDefault();
-    if (formObject.title && formObject.author) {
-      API.saveBook({
-        title: formObject.title,
+    if (formObject.item && formObject.author) {
+      API.saveItem({
+        item: formObject.item,
         author: formObject.author,
-        synopsis: formObject.synopsis
+        description: formObject.description,
+        location: formObject.location
       })
-        .then(res => loadBooks())
+        .then(res => loadItems())
         .catch(err => console.log(err));
     }
   };
@@ -59,13 +59,13 @@ function Books() {
         <Row>
           <Col size="md-6">
             <Jumbotron>
-              <h1>What Books Should I Read?</h1>
+              <h1></h1>
             </Jumbotron>
             <form>
               <Input
                 onChange={handleInputChange}
-                name="title"
-                placeholder="Title (required)"
+                name="item"
+                placeholder="Item name (required)"
               />
               <Input
                 onChange={handleInputChange}
@@ -74,31 +74,36 @@ function Books() {
               />
               <TextArea
                 onChange={handleInputChange}
-                name="synopsis"
-                placeholder="Synopsis (Optional)"
+                name="description"
+                placeholder="Description (Optional)"
+              />
+              <Input
+                onChange={handleInputChange}
+                name="location"
+                placeholder="Location lost (Required)"
               />
               <FormBtn
-                disabled={!(formObject.author && formObject.title)}
+                disabled={!(formObject.author && formObject.item)}
                 onClick={handleFormSubmit}
               >
-                Submit Book
+                Submit Item
               </FormBtn>
             </form>
           </Col>
           <Col size="md-6 sm-12">
             <Jumbotron>
-              <h1>Books On My List</h1>
+              <h1>Items On My List</h1>
             </Jumbotron>
-            {books.length ? (
+            {Items.length ? (
               <List>
-                {books.map(book => (
-                  <ListItem key={book._id}>
-                    <Link to={"/books/" + book._id}>
+                {Items.map(Item => (
+                  <ListItem key={Item._id}>
+                    <Link to={"/Items/" + Item._id}>
                       <strong>
-                        {book.title} by {book.author}
+                        {Item.item} by {Item.author}
                       </strong>
                     </Link>
-                    <DeleteBtn onClick={() => deleteBook(book._id)} />
+                    <DeleteBtn onClick={() => deleteItem(Item._id)} />
                   </ListItem>
                 ))}
               </List>
@@ -112,4 +117,4 @@ function Books() {
   }
 
 
-export default Books;
+export default Items;
