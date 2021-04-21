@@ -25,13 +25,6 @@ function Items() {
       .catch(err => console.log(err));
   };
 
-  // Deletes a Item from the database with a given id, then reloads Items from the db
-  function deleteItem(id) {
-    API.deleteItem(id)
-      .then(res => loadItems())
-      .catch(err => console.log(err));
-  }
-
   // Handles updating component state when the user types into the input field
   function handleInputChange(event) {
     const { name, value } = event.target;
@@ -103,7 +96,6 @@ function Items() {
                         {Item.item} by {Item.author}
                       </strong>
                     </Link>
-                    <DeleteBtn onClick={() => deleteItem(Item._id)} />
                   </ListItem>
                 ))}
               </List>

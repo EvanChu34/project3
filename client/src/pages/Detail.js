@@ -5,14 +5,14 @@ import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 
 function Detail(props) {
-  const [book, setBook] = useState({})
+  const [Item, setItem] = useState({})
 
-  // When this component mounts, grab the book with the _id of props.match.params.id
-  // e.g. localhost:3000/books/599dcb67f0f16317844583fc
+  // When this component mounts, grab the Item with the _id of props.match.params.id
+  // e.g. localhost:3000/Items/599dcb67f0f16317844583fc
   const {id} = useParams()
   useEffect(() => {
-    API.getBook(id)
-      .then(res => setBook(res.data))
+    API.getItem(id)
+      .then(res => setItem(res.data))
       .catch(err => console.log(err));
   }, [])
 
@@ -22,7 +22,7 @@ function Detail(props) {
           <Col size="md-12">
             <Jumbotron>
               <h1>
-                {book.title} by {book.author}
+                {Item.title} by {Item.author}
               </h1>
             </Jumbotron>
           </Col>
@@ -30,9 +30,9 @@ function Detail(props) {
         <Row>
           <Col size="md-10 md-offset-1">
             <article>
-              <h1>Synopsis</h1>
+              <h1>Description</h1>
               <p>
-                {book.synopsis}
+                {item.description}
               </p>
             </article>
           </Col>
