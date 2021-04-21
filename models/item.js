@@ -6,6 +6,7 @@ const itemSchema = new Schema({
   author: { type: String, required: true },
   description: String,
   location: { type: String, required: true},
+  status:{type: String, required: true},
   date: { type: Date, default: Date.now }
 });
 

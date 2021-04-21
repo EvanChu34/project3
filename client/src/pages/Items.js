@@ -75,6 +75,11 @@ function Items() {
                 name="location"
                 placeholder="Location lost (Required)"
               />
+              <Input
+                onChange={handleInputChange}
+                name="status"
+                placeholder="Item Status (Required)"
+              />
               <FormBtn
                 disabled={!(formObject.author && formObject.item)}
                 onClick={handleFormSubmit}
