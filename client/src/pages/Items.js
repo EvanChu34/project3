@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
+import axios from "axios";
 
 function Items() {
   // Setting our component's initial state
@@ -35,16 +36,26 @@ function Items() {
   // Then reload Items from the database
   function handleFormSubmit(event) {
     event.preventDefault();
-    if (formObject.item && formObject.author) {
-      API.saveItem({
-        item: formObject.item,
-        author: formObject.author,
-        description: formObject.description,
-        location: formObject.location
-      })
-        .then(res => loadItems())
-        .catch(err => console.log(err));
+
+    const newReport = {
+      item: formObject.item,
+      author: formObject.author,
+      description: formObject.description,
+      location: formObject.location,
+      date: formObject.date,
     }
+
+    axios.post('http://localhost:3001/report', newReport)
+    // if (formObject.item && formObject.author) {
+    //   API.saveItem({
+    //     item: formObject.item,
+    //     author: formObject.author,
+    //     description: formObject.description,
+    //     location: formObject.location
+    //   })
+    //     .then(res => loadItems())
+    //     .catch(err => console.log(err));
+    // }
   };
 
     return (
