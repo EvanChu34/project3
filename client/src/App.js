@@ -1,17 +1,19 @@
 import React from "react";
 import {Route} from 'react-router-dom';
 import './App.css';
-import Form from './components/Form';
-import Navbar from './components/Nav';
+// import Form from './components/Form';
+// import Navbar from './components/Nav';
 import Login from './components/Login';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import Home from './components/Home/Home.js';
 
 function App() {
   return (
     <>
   <CssBaseline />
   <Route path="/" component={Login} />
-  <Route path="/Filler" component={Filler} />
+  <Route path="/Home" component={Home} />
+  {/* <Route path="/Filler" component={Filler} /> */}
    </>
   );
 }

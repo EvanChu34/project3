@@ -4,14 +4,14 @@ import { BottomNavigation, IconButton, Typography } from "@material-ui/core";
 
 
 const Footer = () => {
-    const classes = useStyles();
+    const classes = makeStyles();
 
     return (
-        <BottomNAvigation width="auto" style={{ background: "#291C8F"}}>
+        <BottomNavigation width="auto" style={{ background: "#291C8F"}}>
             <Typography variant="h3">
                  This is the Footer Element
             </Typography>
-        </BottomNAvigation>
+        </BottomNavigation>
     )
 }
 
