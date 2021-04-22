@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Map from './Map';
+import Map from '../Map/Map.js';
 
 class Home extends Component {
 
@@ -8,7 +8,7 @@ class Home extends Component {
             <div>
                 <Map
                     google={this.props.google}
-                    center={{ lat: 18.5204, lng: 73.8567 }}
+                    center={{ lat:-73.945462, lng: 40.830182 }}
                     height='300px'
                     zoom={15}
                 />
@@ -16,3 +16,5 @@ class Home extends Component {
         );
     }
 }
+
+export default Home;

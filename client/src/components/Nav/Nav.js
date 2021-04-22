@@ -86,20 +86,20 @@ const sideList = slider => (
       className={classes.menuSliderContainer} 
       component="div"
       onClick={toggleSlider(slider, false)}>
-    <Avatar className={classes.logo} src={findit} alt="FindIt" />  
-    <Divider />
+    {/* <Avatar className={classes.logo} src={fi} alt="FindIt" />  
+    <Divider /> */}
     <List>
-         {menuItems.map((lsItem, key)=>(
+         {/* {menuItems.map((lsItem, key)=>(
       <ListItem button key={key} component={Link} to={lsItem.listPath}>
         <ListItemIcon className={classes.listItem}>
           {lsItem.listIcon}
         </ListItemIcon>
     <ListItemText 
           className={classes.listItem}
-          primary={listItem.listText}
+          // primary={listItem.listText}
           />
     </ListItem>
-      ))}
+      ))} */}
     </List>
     </Box>
         )

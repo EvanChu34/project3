@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import Form from " ";
-import Button from "";
+// import Form from "./Form/Form.js";
+import { Form } from 'react-bootstrap';
+// import Button from "./";
 
 export default function Login() {
     const [email, setEmail] = useState("");
@@ -34,9 +35,9 @@ export default function Login() {
               onChange={(e) => setPassword(e.target.value)}
             />
           </Form.Group>
-          <Button block size="lg" type="submit" disabled={!validateForm()}>
+          <button block size="lg" type="submit" disabled={!validateForm()}>
             Login
-          </Button>
+          </button>
         </Form>
       </div>
     )
