@@ -1,9 +1,9 @@
-import React from 'react'
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import React, { Component } from 'react';
+import Navbar from "../Nav/Nav.js";
+import Footer from "../Footer/Footer.js";
+import Map from '../Map/Map.js';
 import { makeStyles } from "@material-ui/core/styles";
 import { 
-         Typography,
          TextField, 
          Box,
          Grid,
@@ -33,7 +33,7 @@ const useStyles = makeStyles({
 
 })
 
-const Home = () => {
+const Home = (props) => {
 
     const classes = useStyles();
 
@@ -48,6 +48,13 @@ const Home = () => {
                 </Typography>
             </Box>
 
+            <Map
+                    google={props.google}
+                    center={{ lat:-73.945462, lng: 40.830182 }}
+                    height='300px'
+                    zoom={15}
+                />
+
 
             <Footer />
 
@@ -57,36 +64,3 @@ const Home = () => {
 
 export default Home
 
-
-
-
-
-
-
-
-
-
-
-
-/*
-import React, { Component } from 'react';
-import Map from '../Map/Map.js';
-
-class Home extends Component {
-
-    render() {
-        return (
-            <div>
-                <Map
-                    google={this.props.google}
-                    center={{ lat:-73.945462, lng: 40.830182 }}
-                    height='300px'
-                    zoom={15}
-                />
-            </div>
-        );
-    }
-}
-
-export default Home;
-*/
