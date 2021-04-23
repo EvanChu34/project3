@@ -20,7 +20,9 @@ import {
 import { 
     Explore,  
     Home, 
-    LockOpen  
+    LockOpen,
+    PageviewIcon,
+    ContactPhoneIcon,  
 } from '@material-ui/icons';
 
 
@@ -55,16 +57,16 @@ const menuItems = [
       listText: "Home",
       listPath: "/Home"
   },
-  //{
-  //    listIcon: <Filler/>,
-  //    listText: "Filler",
-  //    listPath: "Filler"
-  //},
-  //{
-  //    listIcon: <Filler/>,
-  //    listText: "Filler",
-  //    listPath: "Filler"
-  //},
+  {
+      listIcon: <PageviewIcon/>,
+      listText: "LostItems",
+      listPath: "/LostItems"
+  },
+  {
+      listIcon: <ContactPhoneIcon/>,
+      listText: "Contact Us",
+      listPath: "/Contact",
+  },
 ]
 
 const Navbar = () => {

@@ -6,7 +6,7 @@ import Logo from "../../utils/img/findit.png";
 
 const useStyles = makeStyles({
     footer: {
-        background: "#291C8F",
+        background: "black",
     },
     logo: {
         "& .MuiBottomNavigstion-root": {
