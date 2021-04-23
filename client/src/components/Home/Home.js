@@ -42,19 +42,17 @@ const Home = (props) => {
 
             <Navbar />
 
-            <Box component="header">
-                <Typography variant="h2">
-                    MAIN PAGE
-                </Typography>
-            </Box>
+            <Card>
 
             <Map
-                    google={props.google}
-                    center={{ lat:-73.945462, lng: 40.830182 }}
-                    height='300px'
-                    zoom={15}
+                google={props.google}
+                center={{ lat:-73.945462, lng: 40.830182 }}
+                height='300px'
+                zoom={15}
                 />
+            </Card>
 
+            
 
             <Footer />
 
