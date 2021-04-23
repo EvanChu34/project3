@@ -39,7 +39,7 @@ function Detail(props) {
         </Row>
         <Row>
           <Col size="md-2">
-            <Link to="/">← Back to Authors</Link>
+            <Link to="/">← Back to Item List</Link>
           </Col>
         </Row>
       </Container>
