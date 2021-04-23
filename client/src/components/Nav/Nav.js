@@ -2,8 +2,8 @@ import React, {useState} from "react";
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import MobilRightMenuSlider from '@material-ui/core/Drawer';
-import Logo from "./findit?.png";
-
+import Footer from '../Footer/Footer';
+import Logo from "../../utils/img/findit.png";
 import { 
     AppBar,  
     Toolbar, 
@@ -17,15 +17,13 @@ import {
     Typography, 
     Box 
 } from '@material-ui/core';
-
 import { 
     Explore,  
     Home, 
     LockOpen  
 } from '@material-ui/icons';
 
-//import avatar from "../Images/avatar.png";
-//line 80 => DELETE TYPOGRAPHY/REPLACE WITH <Avatar className={classes.avatar} src={avatar} alt="reactAvatar" /> 
+
 
 
 //STYLING
@@ -86,10 +84,10 @@ const sideList = slider => (
       className={classes.menuSliderContainer} 
       component="div"
       onClick={toggleSlider(slider, false)}>
-    {/* <Avatar className={classes.logo} src={fi} alt="FindIt" />  
-    <Divider /> */}
+    <Avatar className={classes.logo} src={Logo} alt="FindIt" />
+    <Divider />
     <List>
-         {/* {menuItems.map((lsItem, key)=>(
+         {menuItems.map((lsItem, key)=>(
       <ListItem button key={key} component={Link} to={lsItem.listPath}>
         <ListItemIcon className={classes.listItem}>
           {lsItem.listIcon}
@@ -99,7 +97,7 @@ const sideList = slider => (
           // primary={listItem.listText}
           />
     </ListItem>
-      ))} */}
+      ))}
     </List>
     </Box>
         )
@@ -120,6 +118,7 @@ const sideList = slider => (
                    open={state.right}
                    onClose={toggleSlider("right", false)}>
                     {sideList("right")}
+                    <Footer />
                 </MobilRightMenuSlider>
             </Toolbar>
            </AppBar>
