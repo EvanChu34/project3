@@ -2,7 +2,7 @@ const path = require("path");
 const router = require("express").Router();
 const apiRoutes = require("./api");
 
-const Item = require("./models/item")
+const Item = require("../models/item")
 
 
 router.route("/report").post((req, res) => {
