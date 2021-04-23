@@ -6,14 +6,17 @@ import './App.css';
 import Login from './components/Login';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Home from './components/Home/Home.js';
+//import LostItems from './components/Lost/Lost.js';
+//import Contact from './components/Contact/Contact.js';
 
 function App() {
   return (
     <>
   <CssBaseline />
-  <Route path="/" component={Login} />
+  <Route exact path="/" component={Login} />
   <Route path="/Home" component={Home} />
-  {/* <Route path="/Filler" component={Filler} /> */}
+  {/* <Route path="/LostItems" component={LostItems} /> */}
+  {/* <Route path="/Contact" component={Contact} /> */}
    </>
   );
 }

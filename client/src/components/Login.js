@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 // import Form from "./Form/Form.js";
 import { Form } from 'react-bootstrap';
+import Navbar from './Nav/Nav.js';
 // import Button from "./";
 
 export default function Login() {
@@ -17,6 +18,7 @@ export default function Login() {
 
     return(
         <div className="Login">
+        <Navbar />
         <Form onSubmit={handleSubmit}>
           <Form.Group size="lg" controlId="email">
             <Form.Label>Email</Form.Label>

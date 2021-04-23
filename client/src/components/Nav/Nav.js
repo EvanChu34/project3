@@ -20,10 +20,11 @@ import {
 import { 
     Explore,  
     Home, 
-    LockOpen,
-    PageviewIcon,
-    ContactPhoneIcon,  
+    LockOpen 
 } from '@material-ui/icons';
+
+import PageviewIcon from '@material-ui/icons/Pageview';
+import ContactPhoneIcon from '@material-ui/icons/ContactPhone';
 
 
 
@@ -32,8 +33,8 @@ import {
 const useStyles = makeStyles(theme=>({
   menuSliderContainer: {
       width: 250,
-      background: "#511",
-      height: "30rem"
+      background: "white",
+      height: "100%",
   },
   logo: {
     display: "block",
@@ -42,7 +43,7 @@ const useStyles = makeStyles(theme=>({
     height: theme.spacing(13)
 },
   listItem: {
-    color: "tan",
+    color: "#ffd600",
   }
 }));
 
@@ -59,7 +60,7 @@ const menuItems = [
   },
   {
       listIcon: <PageviewIcon/>,
-      listText: "LostItems",
+      listText: "Lost Items",
       listPath: "/LostItems"
   },
   {
@@ -81,13 +82,15 @@ const classes = useStyles();
 
 const sideList = slider => (
 
-
-    <Box       
-      className={classes.menuSliderContainer} 
-      component="div"
-      onClick={toggleSlider(slider, false)}>
+  
+    <Box 
+    className={classes.menuSliderContainer} 
+    component="div" 
+    onClick={toggleSlider(slider, false)}
+    >
     <Avatar className={classes.logo} src={Logo} alt="FindIt" />
     <Divider />
+    
     <List>
          {menuItems.map((lsItem, key)=>(
       <ListItem button key={key} component={Link} to={lsItem.listPath}>
@@ -96,7 +99,7 @@ const sideList = slider => (
         </ListItemIcon>
     <ListItemText 
           className={classes.listItem}
-          // primary={listItem.listText}
+          primary={lsItem.listText}
           />
     </ListItem>
       ))}
@@ -107,12 +110,12 @@ const sideList = slider => (
   return (
     <>
       <Box component="nav">
-          <AppBar position="static" style={{ background: "#222" }}>
+          <AppBar position="static" style={{ background: "#ffd600" }}>
              <Toolbar>
              <IconButton onClick={toggleSlider("right", true)}>
-                 <Explore style={{ color: "red" }}/>
+                 <Explore style={{ color: "white" }}/>
              </IconButton>
-                <Typography variant="h5" style={{ color: "tan" }}>
+                <Typography variant="h5" style={{ color: "White" }}>
                 FIND IT
                 </Typography>
                 <MobilRightMenuSlider 
