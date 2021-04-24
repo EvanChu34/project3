@@ -18,13 +18,19 @@ import {
 
 const useStyles = makeStyles({
     mainContainer: {
-        background: "gray",
+        background: "gold",
     },
     cardContainer: {
-        maxWidth: "300",
+        width: "80%",
+        maxWidth: "345",
         margin: "3rem",
         margin: "5rem auto",
-        borderWidth: "3rem"    
+        borderWidth: "10px",
+        borderColor: "black",
+        paddingTop: "20px",
+        paddingBottom: "20px", 
+        paddingLeft: "50px",
+        paddingRight: "50px",  
     },
     cardContent: {
         background: "gray",
@@ -42,7 +48,7 @@ const Home = (props) => {
 
             <Navbar />
 
-            <Card>
+            <Card className={classes.cardContainer}>
 
             <Map
                 google={props.google}
