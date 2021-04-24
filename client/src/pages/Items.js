@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
+import Filter from "../components/Filter";
 import axios from "axios";
 
 function Items() {
@@ -46,16 +47,17 @@ function Items() {
     }
 
     axios.post('http://localhost:3001/report', newReport)
-    // if (formObject.item && formObject.author) {
-    //   API.saveItem({
-    //     item: formObject.item,
-    //     author: formObject.author,
-    //     description: formObject.description,
-    //     location: formObject.location
-    //   })
-    //     .then(res => loadItems())
-    //     .catch(err => console.log(err));
-    // }
+     if (formObject.item && formObject.author) {
+       API.saveItem({
+         item: formObject.item,
+         author: formObject.author,
+         description: formObject.description,
+         location: formObject.location,
+         status:formObject.status,
+       })
+         .then(res => loadItems())
+         .catch(err => console.log(err));
+     }
   };
 
     return (
@@ -63,7 +65,7 @@ function Items() {
         <Row>
           <Col size="md-6">
             <Jumbotron>
-              <h1></h1>
+              <h1>Summit a item</h1>
             </Jumbotron>
             <form>
               <Input
@@ -84,7 +86,7 @@ function Items() {
               <Input
                 onChange={handleInputChange}
                 name="location"
-                placeholder="Location lost (Required)"
+                placeholder="Location lost/found (Required)"
               />
               <Input
                 onChange={handleInputChange}
@@ -101,8 +103,9 @@ function Items() {
           </Col>
           <Col size="md-6 sm-12">
             <Jumbotron>
-              <h1>Items On My List</h1>
+              <h1>Lost/Found List</h1>
             </Jumbotron>
+            <Filter/>
             {Items.length ? (
               <List>
                 {Items.map(Item => (
