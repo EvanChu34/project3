@@ -8,7 +8,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Home from './components/Home/Home.js';
 import LostItems from './components/LostItems/LostItems.js';
 //import LostItems from './components/Lost/Lost.js';
-//import Contact from './components/Contact/Contact.js';
+import Contact from './components/Contact/Contact.js';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
   <Route exact path="/" component={Login} />
   <Route path="/Home" component={Home} />
   <Route path="/LostItems" component={LostItems} />
-  {/* <Route path="/Contact" component={Contact} /> */}
+  <Route path="/Contact" component={Contact} />
    </>
   );
 }

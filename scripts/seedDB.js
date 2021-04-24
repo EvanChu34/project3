@@ -12,9 +12,9 @@ const itemSeed = [
   {
     item: "Notebook",
     author: "Evan Chu",
-    description:
-      "I lost my notebook.",
+    description:"I lost my notebook.",
     location: "New York",
+    status:"Lost",
     date: new Date(Date.now())
   },
 ];
