@@ -44,7 +44,13 @@ const useStyles = makeStyles(theme=>({
 },
   listItem: {
     color: "#ffd600",
-  }
+  },
+  explore: {
+    color: "gold",
+    "&:hover": {
+      color: "light gray",
+    },
+  },
 }));
 
 const menuItems = [
@@ -110,14 +116,16 @@ const sideList = slider => (
   return (
     <>
       <Box component="nav">
-          <AppBar position="static" style={{ background: "#ffd600" }}>
+          <AppBar position="static" style={{ background: "White" }}>
              <Toolbar>
              <IconButton onClick={toggleSlider("right", true)}>
-                 <Explore style={{ color: "white" }}/>
+                  <Explore className={classes.explore}/>  
+                 { /*<Explore style={{color: "white"}} /> */ }
              </IconButton>
-                <Typography variant="h5" style={{ color: "White" }}>
+                <Typography variant="h3" style={{ color: "Gold" }}>
                 FIND IT
                 </Typography>
+                <Avatar className={classes.logo} src={Logo} alt="FindIt" />
                 <MobilRightMenuSlider 
                    anchor="right" 
                    open={state.right}
