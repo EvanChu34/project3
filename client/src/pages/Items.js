@@ -43,6 +43,7 @@ function Items() {
       author: formObject.author,
       description: formObject.description,
       location: formObject.location,
+      status:formObject.status,
       date: formObject.date,
     }
 
