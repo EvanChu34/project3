@@ -1,8 +1,8 @@
 import React from "react";
 
 function Filter() {
-    const [searchText, setSearchText] = useState("");
-    const [data, setData] = useState(dataList);
+  /*  const [searchText, setSearchText] = useState("");
+    const [data, setData] = useState(book);
     const excludeColumns = [];
 
     const handleChange = value => {
@@ -22,7 +22,7 @@ function Filter() {
         setData(filteredData);
       }
     }
-
+    */
     return (
       <div className="Filter">
         <br />
@@ -31,8 +31,8 @@ function Filter() {
           style={{ marginLeft: 5 }}
           type="text"
           placeholder="Type to search..."
-          value={searchText}
-          onChange={e => handleChange(e.target.value)}
+        //  value={searchText}
+        //  onChange={e => handleChange(e.target.value)}
         />
       </div>
     );
