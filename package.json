@@ -25,9 +25,12 @@
     "@material-ui/styles": "^4.11.3",
     "axios": "^0.21.1",
     "cors": "^2.8.5",
+    "emailjs-com": "^2.6.4",
     "express": "^4.17.1",
     "google-maps-react": "^2.0.6",
     "if-env": "^1.0.4",
-    "mongoose": "^5.12.5"
+    "mongoose": "^5.12.5",
+    "react-hook-form": "^7.2.3",
+    "react-toastify": "^7.0.4"
   }
 }
