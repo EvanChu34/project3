@@ -9,7 +9,7 @@ function Filter() {
       setSearchText(value);
       filterData(value);
     };
-  /* 
+
     const filterData = (value) => {
       const lowercasedValue = value.toLowerCase().trim();
       if (lowercasedValue === "") setData(dataList);
@@ -22,7 +22,7 @@ function Filter() {
         setData(filteredData);
       }
     }
-   */
+
     return (
       <div className="Filter">
         <br />

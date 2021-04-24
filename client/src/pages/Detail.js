@@ -38,6 +38,26 @@ function Detail(props) {
           </Col>
         </Row>
         <Row>
+          <Col size="md-10 md-offset-1">
+            <article>
+              <h2>Location</h2>
+              <p>
+                {item.location}
+              </p>
+            </article>
+          </Col>
+        </Row>
+        <Row>
+          <Col size="md-10 md-offset-1">
+            <article>
+              <h2>Status</h2>
+              <p>
+                {item.status}
+              </p>
+            </article>
+          </Col>
+        </Row>
+        <Row>
           <Col size="md-2">
             <Link to="/">← Back to Item List</Link>
           </Col>
