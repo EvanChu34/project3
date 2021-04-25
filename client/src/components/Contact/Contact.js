@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '../Nav/Nav.js';
 import Footer from '../Footer/Footer.js';
 import { makeStyles, withStyles } from "@material-ui/core/styles";
-import { TextField, Typography, Grid, Box, Button } from "@material-ui/core";
+import { TextField, Typography, Grid, Box, Button, Card } from "@material-ui/core";
 import SendIcon from '@material-ui/icons/Send';
 
 const InputField = withStyles({
@@ -29,15 +29,22 @@ const InputField = withStyles({
 
 const useStyles = makeStyles(theme=>({
     form: {
-        top: "35%",
+        top: "45%",
         left: "50%",
+        width: "50%",
+        textAlign: "center",
         transform: "translate(-50%, -50%)",
         position: "absolute",
+        paddingTop: "20px",
+        paddingBottom: "20px", 
+        paddingLeft: "20px",
+        paddingRight: "20px",  
     },
     button: {
         marginTop: "1rem",
         color: "#ffd600",
         borderColor: "#ffd600",
+        width: "25%"
     },
 }));
 
@@ -50,7 +57,7 @@ const Contact = () => {
             <Box component="div" style={{ background: "white", height: "100vh"}}>
             <Navbar />
                 <Grid container justify="center">
-                    <Box component="form" className={classes.form}>    
+                <Card component="form" className={classes.form}>    
                 <Typography variant="h5" style={{color: "#ffd600", textAlign: "center", textTransform: "uppercase"}}>
                    Contact Us:
                 </Typography>
@@ -58,7 +65,7 @@ const Contact = () => {
                 fullWidth={true}
                 label="Name"
                 variant="outlined"
-                inputProps={{style:{ color: "white" } }} 
+                inputProps={{style:{ color: "black" } }} 
                 margin="dense"
                 size="medium"
                 />
@@ -67,7 +74,7 @@ const Contact = () => {
                 fullWidth={true}
                 label="Email"
                 variant="outlined"
-                inputProps={{style:{ color: "white"}}} 
+                inputProps={{style:{ color: "black"}}} 
                 margin="dense"
                 size="medium"
                 />
@@ -76,7 +83,7 @@ const Contact = () => {
                 fullWidth={true}
                 label="Company Name"
                 variant="outlined"
-                inputProps={{style:{ color: "white"}}} 
+                inputProps={{style:{ color: "black"}}} 
                 margin="dense"
                 size="medium"
                 />
@@ -89,7 +96,7 @@ const Contact = () => {
                 >
                     contact us
                 </Button>
-                </Box>
+                </Card>
                 </Grid>
             </Box>
             <Footer />
