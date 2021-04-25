@@ -11,8 +11,9 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../Grid/Grid";
 import { List, ListItem } from "../List/List"; 
 import { Input, TextArea, FormBtn } from "../Form/Form";
+import SearchBar from "../Searchbar/Searchbar";
 import axios from "axios";
-import Filter from "../Filter/Filter";
+
  
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -43,7 +44,12 @@ const LostItems = () => {
       const { name, value } = event.target;
       setFormObject({...formObject, [name]: value})
     };
-  
+
+    //handleInput = (e)=> {
+    //  console.log(e.target.value)
+    //  this.setState({searchItem: e.target.value})
+    //};
+
     // When the form is submitted, use the API.saveItem method to save the Item data
     // Then reload Items from the database
     function handleFormSubmit(event) {
@@ -124,14 +130,14 @@ const LostItems = () => {
             <Jumbotron>
               <h1>Lost/Found List</h1>
             </Jumbotron>
-            <Filter/>
+            <SearchBar/>
             {Items.length ? (
               <List>
                 {Items.map(Item => (
                   <ListItem key={Item._id}>
                     <Link to={"/Items/" + Item._id}>
                       <strong>
-                        {Item.item} by {Item.author}
+                        {Item.item} : {Item.author}
                       </strong>
                     </Link>
                   </ListItem>
@@ -147,6 +153,7 @@ const LostItems = () => {
         <Footer />
         </>
     )
+  
 }
 
 export default LostItems
