@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Navbar from "../Nav/Nav.js";
 import Footer from "../Footer/Footer.js";
-import Map from '../Map/Map.js';
+import MapContainer from '../Map/Map.js';
 import { makeStyles } from "@material-ui/core/styles";
 import { 
          TextField, 
@@ -50,12 +50,8 @@ const Home = (props) => {
 
             <Card className={classes.cardContainer}>
 
-            <Map
-                google={props.google}
-                center={{ lat:-73.945462, lng: 40.830182 }}
-                height='300px'
-                zoom={15}
-                />
+            <MapContainer/>
+
             </Card>
 
             
