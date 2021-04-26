@@ -1,28 +1,29 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/styles';
-import { BottomNavigation, IconButton, Typography, Avatar } from "@material-ui/core";
+import { BottomNavigation, Avatar } from "@material-ui/core";
 import Logo from "../../utils/img/findit.png";
-import FindItIcon from "../../utils/img/finditlogo3.png";
+//import FindItIcon from "../../utils/img/finditlogo3.png";
 
 
 
 const useStyles = makeStyles({
-//    avatar: {
-//        ".MuiAvatar-img": {
-//        variant: "square",
-//        sizes: "100%",
-//    },
-//    },
     logo: {
         "& .MuiAvatar-root": {
             minWidth: 0,
             maxWidth: 250,
          },
     },
+//    avatar: {
+//        ".MuiAvatar-img": {
+//        variant: "square",
+//        sizes: "100%",
+//    },
+//    },
+    
 });
 
 const Footer = () => {
-    const classes = makeStyles();
+    const classes = useStyles();
 
     return (
         <BottomNavigation width="auto" style={{ background: "white"}}>

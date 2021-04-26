@@ -11,7 +11,7 @@ import Jumbotron from '../Jumbotron/Jumbotron.js';
 
 const About = () => {
     return(
-        <>
+        <Box component="div" style={{ height: "100%" }}>
         <Navbar />
         <Box component="div">
           <Typography variant="h2">
@@ -28,7 +28,7 @@ const About = () => {
         </Container>
 
         <Footer />
-        </>
+        </Box>
     )
 }
 

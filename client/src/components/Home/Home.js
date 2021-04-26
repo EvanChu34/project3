@@ -3,26 +3,15 @@ import Navbar from "../Nav/Nav.js";
 import LostItems from "../LostItems/LostItems.js";
 import Footer from "../Footer/Footer.js";
 import MapContainer from '../Map/Map.js';
-import Background from './Home.css';
+import Image from "../../utils/img/bgOption3.jpeg";
 import { makeStyles } from "@material-ui/core/styles";
-import { 
-         TextField, 
-         Box,
-         Grid,
-         Card,
-         CardActionArea,
-         CardActions,
-         CardContent,
-         CardMedia,
-         Button,
-         Typography
-} from "@material-ui/core";
+import {  Box, Card } from "@material-ui/core";
 
 const useStyles = makeStyles({
-    //mainContainer: {
-        //background: "../../utils/img/backgroundOp1.jpeg",
-        //background: "#fbc02d",
-    //},
+    mainContainer: {
+        backgroundImage: `url(${Image})`,
+    
+    },
     cardContainer: {
         //background: "#1976d2",
         background: "black",
@@ -41,15 +30,14 @@ const useStyles = makeStyles({
         background: "gray",
         text: "black",
     },
-
-})
+});
 
 const Home = (props) => {
 
     const classes = useStyles();
 
     return (
-        <Box component="div" className={classes.mainContainer}>
+        <Box component="main" className={classes.mainContainer}>
 
             <Navbar />
 
