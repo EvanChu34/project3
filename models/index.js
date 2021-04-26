@@ -1,3 +1,4 @@
+/*
 module.exports = {
   Item: require("./item")
 };
@@ -43,3 +44,5 @@ db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
 module.exports = db;
+
+*/

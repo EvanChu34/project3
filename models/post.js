@@ -1,3 +1,4 @@
+/*
 module.exports = (sequelize, DataTypes) => {
     const Post = sequelize.define("Post", {
       title: {
@@ -25,4 +26,4 @@ module.exports = (sequelize, DataTypes) => {
   
     return Post;
   };
-  
+  */
