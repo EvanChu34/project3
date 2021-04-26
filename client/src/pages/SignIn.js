@@ -14,8 +14,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
 
-
-
 function Copyright() {
     return (
       <Typography variant="body2" color="textSecondary" align="center">
@@ -53,7 +51,7 @@ function Copyright() {
     const classes = useStyles();
   
     return (
-      <Container component="main" maxWidth="xs">
+      <Box component="main" maxWidth="xs">
         <CssBaseline />
         <div className={classes.paper}>
           <Avatar className={classes.avatar}>
@@ -105,9 +103,13 @@ function Copyright() {
                 </Link>
               </Grid>
               <Grid item>
-                <Link href="#" variant="body2">
-                  {"Don't have an account? Sign Up"}
-                </Link>
+              <Link> 
+                <a 
+                href={"../Up/Up.js"} 
+                variant="body2">
+                {"Don't have an account? Sign Up!"}
+                </a>
+              </Link>
               </Grid>
             </Grid>
           </form>
@@ -115,6 +117,6 @@ function Copyright() {
         <Box mt={8}>
           <Copyright />
         </Box>
-      </Container>
+      </Box>
     );
   }

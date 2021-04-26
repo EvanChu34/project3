@@ -20,8 +20,7 @@ import {
 import { 
     Explore,  
     Home, 
-    LockOpen,
-    PageviewIcon,
+    LockOpen
     //ContactPhoneIcon, 
 } from '@material-ui/icons';
 

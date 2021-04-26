@@ -9,6 +9,7 @@ import Home from './components/Home/Home.js';
 import AboutUs from './components/About/About.js';
 //import LostItems from './components/Lost/Lost.js';
 import Contact from './components/Contact/Contact.js';
+import SignUp from './components/Up/Up.js';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
   <Route path="/Home" component={Home} />
   <Route path="/AboutUs" component={AboutUs} />
   <Route path="/Contact" component={Contact} />
+  <Route path="/Up" component={SignUp} />
    </>
   );
 }

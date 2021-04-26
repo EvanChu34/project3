@@ -1,6 +1,6 @@
 import React, { useState, useEffect }from 'react';
-import Navbar from '../Nav/Nav.js';
-import Footer from '../Footer/Footer.js';
+//import Navbar from '../Nav/Nav.js';
+//import Footer from '../Footer/Footer.js';
 import { 
     Typography,
     Box
@@ -15,13 +15,13 @@ import SearchBar from "../Searchbar/Searchbar";
 import axios from "axios";
 
  
-import { makeStyles } from "@material-ui/core/styles";
+//import { makeStyles } from "@material-ui/core/styles";
 
-const useStyles = makeStyles();
+//const useStyles = makeStyles();
 
 const LostItems = () => {
 
-    const classes = useStyles();
+    //const classes = useStyles();
     const [Items, setItems] = useState([])
     const [formObject, setFormObject] = useState({})
   
