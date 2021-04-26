@@ -22,6 +22,29 @@ router.route("/report").post((req, res) => {
   newItem.save();
 })
 
+router.get("/testSave", (req, res) => {
+  console.log('We hit the route!! saveee')
+  const item = 'laptop'
+  const author = 'Joe';
+  const description = 'apple'
+  const location = {lat: 40.23829495163714, lng: -73.49643585205078};
+  
+  const newItem = new Item ({
+    item,
+    author,
+    description,
+    location,
+    
+  });
+
+  newItem.save();
+})
+
+router.get('/allItems', function(req,res) {
+  Item.find({}, function(err, items) {
+    res.json(items)
+  })
+})
 // API Routes
 // router.use("/api", apiRoutes);
 
