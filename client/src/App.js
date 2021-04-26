@@ -3,10 +3,10 @@ import {Route} from 'react-router-dom';
 //import './App.css';
 // import Form from './components/Form';
 // import Navbar from './components/Nav';
-import Login from './components/Login';
+import Login from './components/Login/Login.js';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Home from './components/Home/Home.js';
-import LostItems from './components/LostItems/LostItems.js';
+import AboutUs from './components/About/About.js';
 //import LostItems from './components/Lost/Lost.js';
 import Contact from './components/Contact/Contact.js';
 
@@ -16,7 +16,7 @@ function App() {
   <CssBaseline />
   <Route exact path="/" component={Login} />
   <Route path="/Home" component={Home} />
-  <Route path="/LostItems" component={LostItems} />
+  <Route path="/AboutUs" component={AboutUs} />
   <Route path="/Contact" component={Contact} />
    </>
   );
