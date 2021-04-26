@@ -19,10 +19,10 @@ import {
 } from "@material-ui/core";
 
 const useStyles = makeStyles({
-    mainContainer: {
-        background: "../../utils/img/backgroundOp1.jpeg",
+    //mainContainer: {
+        //background: "../../utils/img/backgroundOp1.jpeg",
         //background: "#fbc02d",
-    },
+    //},
     cardContainer: {
         //background: "#1976d2",
         background: "black",
