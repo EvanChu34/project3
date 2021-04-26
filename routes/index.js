@@ -5,17 +5,19 @@ const apiRoutes = require("./api");
 const Item = require("../models/item")
 
 
-router.route("/report").post((req, res) => {
+router.route("/items").post((req, res) => {
   const item = req.body.item;
   const author = req.body.author;
   const description = req.body.description;
   const location = req.body.location;
+  const status = req.body.status;
   const date = req.body.date;
   const newItem = new Item ({
     item,
     author,
     description,
     location,
+    status,
     date
   });
 
@@ -34,6 +36,7 @@ router.get("/testSave", (req, res) => {
     author,
     description,
     location,
+    status,
     
   });
 
