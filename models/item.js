@@ -5,8 +5,15 @@ const itemSchema = new Schema({
   item: { type: String, required: true },
   author: { type: String, required: true },
   description: { type: String, required: true },
-  location: { type: String, required: true},
-  status:{type: String, required: true},
+  location: {
+    lat: {
+      type: Number
+    },
+    lng: {
+      type: Number
+    }
+  },
+  status:{type: String},
   date: { type: Date, default: Date.now }
 });
 
