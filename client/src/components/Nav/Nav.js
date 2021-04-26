@@ -20,11 +20,14 @@ import {
 import { 
     Explore,  
     Home, 
-    LockOpen 
+    LockOpen,
+    PageviewIcon,
+    //ContactPhoneIcon, 
 } from '@material-ui/icons';
 
-import PageviewIcon from '@material-ui/icons/Pageview';
+//import PageviewIcon from '@material-ui/icons/Pageview';
 import ContactPhoneIcon from '@material-ui/icons/ContactPhone';
+import InfoIcon from '@material-ui/icons/Info';
 
 
 
@@ -43,10 +46,10 @@ const useStyles = makeStyles(theme=>({
     height: theme.spacing(13)
 },
   listItem: {
-    color: "#ffd600",
+    color: "#fbc02d",
   },
   explore: {
-    color: "gold",
+    color: "#fbc02d",
     "&:hover": {
       color: "light gray",
     },
@@ -65,9 +68,9 @@ const menuItems = [
       listPath: "/Home"
   },
   {
-      listIcon: <PageviewIcon/>,
-      listText: "Lost Items",
-      listPath: "/LostItems"
+      listIcon: <InfoIcon/>,
+      listText: "About Us",
+      listPath: "/AboutUs"
   },
   {
       listIcon: <ContactPhoneIcon/>,
@@ -122,7 +125,7 @@ const sideList = slider => (
                   <Explore className={classes.explore}/>  
                  { /*<Explore style={{color: "white"}} /> */ }
              </IconButton>
-                <Typography variant="h3" style={{ color: "Gold" }}>
+                <Typography variant="h3" style={{ color: "#fbc02d" }}>
                 FIND IT
                 </Typography>
                 <Avatar className={classes.logo} src={Logo} alt="FindIt" />

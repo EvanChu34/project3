@@ -80,9 +80,9 @@ const LostItems = () => {
 
     return (
         <>
-        <Navbar />
+        { /* <Navbar /> */ }
         <Box component="div">
-          <Typography variant="h2">
+          <Typography variant="h2" style={{textAlign: "center"}}>
              Lost/Found Items
           </Typography>
         </Box>
@@ -150,7 +150,8 @@ const LostItems = () => {
         </Row>
       </Container>
 
-        <Footer />
+        
+        { /* <Footer /> */ }
         </>
     )
   

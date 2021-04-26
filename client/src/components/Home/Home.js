@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Navbar from "../Nav/Nav.js";
+import LostItems from "../LostItems/LostItems.js";
 import Footer from "../Footer/Footer.js";
 import MapContainer from '../Map/Map.js';
+import Background from './Home.css';
 import { makeStyles } from "@material-ui/core/styles";
 import { 
          TextField, 
@@ -18,9 +20,12 @@ import {
 
 const useStyles = makeStyles({
     mainContainer: {
-        background: "gold",
+        background: "../../utils/img/backgroundOp1.jpeg",
+        //background: "#fbc02d",
     },
     cardContainer: {
+        //background: "#1976d2",
+        background: "black",
         width: "80%",
         maxWidth: "345",
         margin: "3rem",
@@ -54,7 +59,7 @@ const Home = (props) => {
 
             </Card>
 
-            
+            <LostItems />
 
             <Footer />
 
