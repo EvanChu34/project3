@@ -1,7 +1,11 @@
 import React from 'react';
 import Navbar from '../Nav/Nav.js';
 import Footer from '../Footer/Footer.js';
-import { Container } from '../Grid/Grid.js';
+import { Container, Row } from '../Grid/Grid.js';
+import { 
+    Typography,
+    Box
+ } from '@material-ui/core';
 import Jumbotron from '../Jumbotron/Jumbotron.js';
 
 
