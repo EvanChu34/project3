@@ -1,4 +1,6 @@
 import { useForm } from 'react-hook-form';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
 
 const ContactForm = () => {
   const { register, errors, handleSubmit, reset } = useForm();
@@ -56,7 +58,7 @@ const ContactForm = () => {
                       type='text'
                       name='subject'
                       ref={register({
-                        required: { value: true, message: 'Please enter whhat you have lost' },
+                        required: { value: true, message: 'Please enter what you have lost' },
                         maxLength: {
                           value: 75,
                           message: 'Subject cannot exceed 75 characters'
