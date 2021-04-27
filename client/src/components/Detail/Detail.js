@@ -5,7 +5,7 @@ import Jumbotron from "../Jumbotron/Jumbotron";
 import API from "../../utils/API";
 
 function Detail(props) {
-  const [Item, setItem] = useState({})
+  const [item, setItem] = useState({})
 
   // When this component mounts, grab the Item with the _id of props.match.params.id
   // e.g. localhost:3000/Items/599dcb67f0f16317844583fc
@@ -22,7 +22,7 @@ function Detail(props) {
           <Col size="md-12">
             <Jumbotron>
               <h1>
-                {Item.title} : {Item.author}
+                {item.title} : {item.author}
               </h1>
             </Jumbotron>
           </Col>
@@ -59,7 +59,7 @@ function Detail(props) {
         </Row>
         <Row>
           <Col size="md-2">
-            <Link to="/">← Back to Item List</Link>
+            <Link to="/Home">← Back to Item List</Link>
           </Col>
         </Row>
       </Container>
