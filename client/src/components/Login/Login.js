@@ -150,13 +150,9 @@ export default function SignIn() {
         </Card>
       </div>
     </Box>
-    { /* <Box mt={8}> */ }
-      { /* </Box> */ }
     <Footer />
     <Copyright />
     </>
-
-    
   );
 }
 
