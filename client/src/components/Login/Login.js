@@ -16,6 +16,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import { makeStyles } from '@material-ui/core/styles';
 import Image from '../../utils/img/bgPattern1.jpg'; 
 import SignUp from '../../pages/SignUp.js';
+import Footer from '../Footer/Footer.js';
 
 
 
@@ -32,19 +33,18 @@ function Copyright() {
   );
 }
 
-//const useStyles = makeStyles({
-  
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
     backgroundImage: `url(${Image})`,
     backgroundPosition: "center center",
 	  backgroundSize: "cover",
-	  height: "900px",
+	  height: "775px",
     //marginBottom: "0px",
   },
   paper: {
-    marginTop: theme.spacing(8),
+    marginTop: "0px",
+    //marginTop: theme.spacing(8),
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -81,9 +81,8 @@ export default function SignIn() {
   const classes = useStyles();
 
   return (
-    //<Box component="body" >
+    <>
     <Box component="div" maxWidth="xs" className={classes.mainContainer}>
-    <Navbar />
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
@@ -150,12 +149,10 @@ export default function SignIn() {
         </form>
         </Card>
       </div>
-      <Box mt={8}>
-        <Copyright />
-      </Box>
     </Box>
-   // </Box>
-    
+    <Footer />
+    <Copyright />
+    </>
   );
 }
 
