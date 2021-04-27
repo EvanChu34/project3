@@ -24,13 +24,10 @@ import {
 import { 
     Explore,  
     Home, 
-    LockOpen
-    //ContactPhoneIcon, 
+    LockOpen, 
 } from '@material-ui/icons';
-//import PageviewIcon from '@material-ui/icons/Pageview';
 import ContactPhoneIcon from '@material-ui/icons/ContactPhone';
 import InfoIcon from '@material-ui/icons/Info';
-//import "@fontsource/monoton"; // Defaults to weight 400
 
 
 

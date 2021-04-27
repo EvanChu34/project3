@@ -1,6 +1,5 @@
 import React from "react";
 import {Route} from 'react-router-dom';
-//import './App.css';
 // import Form from './components/Form';
 // import Navbar from './components/Nav';
 import Login from './components/Login/Login.js';
@@ -11,12 +10,11 @@ import AboutUs from './components/About/About.js';
 import Contact from './components/Contact/Contact.js';
 import Up from './components/Up/Up.js';
 import Detail from './components/Detail/Detail.js'
-import "@fontsource/monoton";
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 
 
-
+/*
   const FredokaFont = createMuiTheme({
     typography: {
       fontFamily: [
@@ -56,6 +54,8 @@ import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
                 'sans-serif',
               ].join(','),
             },});
+
+            */
 
         
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/styles';
 import { BottomNavigation, Avatar } from "@material-ui/core";
 import Logo from "../../utils/img/findit.png";
-//import FindItIcon from "../../utils/img/finditlogo3.png";
+import FindItIcon from "../../utils/img/finditlogo3.png";
 
 
 
