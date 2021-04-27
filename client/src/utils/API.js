@@ -10,7 +10,7 @@ export default {
     return axios.get("/items/" + id);
   },
   // Gets all  items
-  // Deletes the d item with the given id
+  // Deletes the item with the given id
   deleteItem: function(id) {
     return axios.delete("/items/" + id);
   },
