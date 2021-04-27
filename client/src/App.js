@@ -11,6 +11,53 @@ import AboutUs from './components/About/About.js';
 import Contact from './components/Contact/Contact.js';
 import Up from './components/Up/Up.js';
 import Detail from './components/Detail/Detail.js'
+import "@fontsource/monoton";
+import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+
+
+
+
+  const FredokaFont = createMuiTheme({
+    typography: {
+      fontFamily: [
+        'Fredoka One',
+        'cursive',
+      ].join(','),
+    },});
+
+    const SigmarOneFont = createMuiTheme({
+      typography: {
+        fontFamily: [
+          'Sigmar One',
+          'cursive',
+        ].join(','),
+      },});
+
+      const CodaCaptionFont = createMuiTheme({
+        typography: {
+          fontFamily: [
+            'Coda Caption',
+            'sans-serif',
+          ].join(','),
+        },});
+    
+        const JosefinSansFont = createMuiTheme({
+          typography: {
+            fontFamily: [
+              'Josefin Sans',
+              'sans-serif',
+            ].join(','),
+          },});
+
+          const Orbitron = createMuiTheme({
+            typography: {
+              fontFamily: [
+                'Orbitron',
+                'sans-serif',
+              ].join(','),
+            },});
+
+        
 
 
 function App() {

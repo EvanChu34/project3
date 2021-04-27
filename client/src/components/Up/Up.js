@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '../Nav/Nav.js';
 import Footer from '../Footer/Footer.js';
 import SignUp from '../../pages/SignUp.js';
-import SignIn from "../../pages/SignIn.js";
+//import SignIn from "../../pages/SignIn.js";
 import { Box,
          Card,
          } from '@material-ui/core';
@@ -33,8 +33,6 @@ const useStyles = makeStyles({
 },
 })
 
-
-
 const Up = () => {
 
   const classes = useStyles();
@@ -48,10 +46,7 @@ const Up = () => {
     </Box> 
     <Footer />
     </>
-    
-  
-  
-  )
+    )
 }
 
 export default Up

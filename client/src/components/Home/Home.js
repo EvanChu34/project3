@@ -4,13 +4,28 @@ import LostItems from "../LostItems/LostItems.js";
 import Footer from "../Footer/Footer.js";
 import MapContainer from '../Map/Map.js';
 import Image from "../../utils/img/bgOption3.jpeg";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import {  Box,
           Card, 
           CardActionArea,
           CardContent, 
           Typography, 
         } from "@material-ui/core";
+import "@fontsource/monoton" // Defaults to weight 400.
+import "@fontsource/righteous" // Defaults to weight 400.
+import "@fontsource/acme" // Defaults to weight 400.
+import "@fontsource/exo-2" // Defaults to weight 400.
+//import "@fontsource/exo-2/500.css" // Weight 500.
+//import "@fontsource/exo-2/900-italic.css" // Italic variant.
+import "@fontsource/monoton"; // Defaults to weight 400
+
+const FindItFont = createMuiTheme({
+  typography: {
+    fontFamily: [
+      'Monoton',
+      'cursive',
+    ].join(','),
+  },});
 
 const useStyles = makeStyles({
     mainContainer: {
@@ -51,8 +66,8 @@ const Home = (props) => {
             <LostItems />
 
             <Card className={classes.cardContainer}>
-              <CardActionArea style={{ background: "#eaba00" }}>
-                <Typography variant="h3" style={{textAlign: "center", color: "white" }}>
+              <CardActionArea style={{ background: "#bdab00", }}>
+                <Typography variant="h3" style={{ textAlign: "center", color: "white", fontFamily: 'Alfa Slab One' }}>
                 Locate Your Item!
                 </Typography>
               </CardActionArea>

@@ -50,8 +50,8 @@ const useStyles = makeStyles(theme=>({
     },
     button: {
         marginTop: "1rem",
-        color: "#ffd600",
-        borderColor: "#ffd600",
+        color: "#bdab00",
+        borderColor: "#bdab00",
         width: "25%"
     },
 }));
@@ -66,7 +66,7 @@ const Contact = () => {
             <Navbar />
                 <Grid container justify="center">
                 <Card component="form" className={classes.form}>    
-                <Typography variant="h5" style={{color: "#ffd600", textAlign: "center", textTransform: "uppercase"}}>
+                <Typography variant="h5" style={{color: "#bdab00", textAlign: "center", textTransform: "uppercase"}}>
                    Contact Us:
                 </Typography>
                 <InputField

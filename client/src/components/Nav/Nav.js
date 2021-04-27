@@ -1,6 +1,9 @@
 import React, {useState} from "react";
 import { Link } from 'react-router-dom';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles,
+         ThemeProvider,
+         createMuiTheme,  
+        } from '@material-ui/core/styles';
 import MobilRightMenuSlider from '@material-ui/core/Drawer';
 import Footer from '../Footer/Footer';
 import Logo from "../../utils/img/findit.png";
@@ -16,7 +19,7 @@ import {
     Divider, 
     List, 
     Typography, 
-    Box 
+    Box,
 } from '@material-ui/core';
 import { 
     Explore,  
@@ -24,11 +27,10 @@ import {
     LockOpen
     //ContactPhoneIcon, 
 } from '@material-ui/icons';
-
 //import PageviewIcon from '@material-ui/icons/Pageview';
 import ContactPhoneIcon from '@material-ui/icons/ContactPhone';
 import InfoIcon from '@material-ui/icons/Info';
-
+//import "@fontsource/monoton"; // Defaults to weight 400
 
 
 
@@ -46,10 +48,10 @@ const useStyles = makeStyles(theme=>({
     height: theme.spacing(13)
 },
   listItem: {
-    color: "#fbc02d",
+    color: "#bdab00",
   },
   explore: {
-    color: "#fbc02d",
+    color: "#bdab00",
     "&:hover": {
       color: "light gray",
     },
@@ -123,10 +125,10 @@ const sideList = slider => (
              <Toolbar>
              <IconButton onClick={toggleSlider("right", true)}>
                   <Explore className={classes.explore}/>  
-                 { /*<Explore style={{color: "white"}} /> */ }
              </IconButton>
-                <Typography variant="h3" style={{ color: "#fbc02d" }}>
-                FIND IT
+                <Typography variant="h3" style={{ color: "#bdab00" }}> 
+                { /* "#fbc02d" */}
+                FINDIT
                 </Typography>
                 <Avatar className={classes.logo} src={Logo} alt="FindIt" />
                 <MobilRightMenuSlider 

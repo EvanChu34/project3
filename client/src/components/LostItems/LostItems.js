@@ -8,7 +8,6 @@ import {
     CardContent,
     CardActionArea,
     CardActions,
- 
  } from '@material-ui/core';
 import Jumbotron from "../Jumbotron/Jumbotron";
 import API from "../../utils/API";
@@ -20,6 +19,17 @@ import SearchBar from "../Searchbar/Searchbar";
 import axios from "axios";
 import { makeStyles } from "@material-ui/core/styles";
 import { mergeClasses } from '@material-ui/styles';
+import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+
+const AlfaFont = createMuiTheme({
+  typography: {
+    fontFamily: [
+      'Alfa Slab One',
+      'cursive',
+    ].join(','),
+  },});
+
+
 
 const useStyles = makeStyles({
   cardContainer: {
@@ -102,37 +112,25 @@ const LostItems = () => {
     };
 
     const classes = makeStyles();
+    //const font = createMuiTheme();
 
     return (
 
       <>
         
         <Box component="div">
-          <Typography variant="h2" style={{textAlign: "center" }}>
-             Lost/Found Items
+          <Typography variant="h2" style={{ textAlign: "center", fontFamily: 'Alfa Slab One', color: "#3e70e5", }}>
+             Lost & Found Items
           </Typography>
         </Box>
+        
         <Container fluid>
         <Row>
           <Col size="md-6">
             <Card className={classes.cardContainer}>
-              <CardActionArea style={{ background: "#eaba00" }}>
-                <Typography variant="h4" style={{textAlign: "center", color: "white" }}>
+              <CardActionArea style={{ background: "#bdab00" }}>
+                <Typography variant="h4" style={{textAlign: "center", color: "white", fontFamily: 'Alfa Slab One'}}>
               Submit an Item
-                </Typography>
-              </CardActionArea>
-              <CardContent style={{ background: "white" }}>
-
-            <Jumbotron>
-              <h1></h1>
-            </Jumbotron>
-            </CardContent>
-            </Card>
-            <br />
-            <Card className={classes.cardContainer}>
-              <CardActionArea style={{ background: "#eaba00" }}>
-                <Typography variant="h5" style={{textAlign: "center", color: "white" }}>
-              Please Add a Description of your Item
                 </Typography>
               </CardActionArea>
               <CardContent  style={{ background: "white" }}> 
@@ -173,26 +171,13 @@ const LostItems = () => {
             </form>
             </CardContent> 
             </Card>
-            <br />
+            <br/>
           </Col>
           <Col size="md-6 sm-12">
             <Card className={classes.cardContainer}>
-              <CardActionArea style={{ background: "#eaba00" }}>
-                <Typography variant="h4" style={{textAlign: "center", color: "white" }}>
-                 Lost/Found List
-                </Typography>
-              </CardActionArea>
-              <CardContent style={{ background: "white" }}>
-            <Jumbotron>
-              <h1></h1>
-            </Jumbotron>
-            </CardContent>
-            </Card>
-            <br />
-            <Card className={classes.cardContainer}>
-              <CardActionArea style={{ background: "#eaba00" }}>
-                <Typography variant="h4" style={{textAlign: "center", color: "white" }}>
-                  Search Bar
+              <CardActionArea style={{ background: "#bdab00", }}>
+                <Typography variant="h4" style={{textAlign: "center", color: "white", fontFamily: 'Alfa Slab One' }}>
+                  Lost & Found List
                 </Typography>
               </CardActionArea>
               <CardContent style={{ background: "white" }}>
