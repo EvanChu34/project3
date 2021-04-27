@@ -133,6 +133,21 @@ const LostItems = () => {
               Submit an Item
                 </Typography>
               </CardActionArea>
+
+              <CardContent style={{ background: "white" }}>
+            <Jumbotron>
+              <h1></h1>
+            </Jumbotron>
+            </CardContent>
+            </Card>
+            <br />
+            <Card className={classes.cardContainer}>
+              <CardActionArea style={{ background: "#bdab00" }}>
+                <Typography variant="h5" style={{textAlign: "center", color: "white", fontFamily: 'Alfa Slab One' }}>
+              Please Add a Description of your Item
+                </Typography>
+              </CardActionArea>
+
               <CardContent  style={{ background: "white" }}> 
             <form>
               <Input
@@ -175,10 +190,25 @@ const LostItems = () => {
           </Col>
           <Col size="md-6 sm-12">
             <Card className={classes.cardContainer}>
-              <CardActionArea style={{ background: "#bdab00", }}>
+
+
+            <CardActionArea style={{ background: "#bdab00" }}>
                 <Typography variant="h4" style={{textAlign: "center", color: "white", fontFamily: 'Alfa Slab One' }}>
-                  Lost & Found List
+                 Lost/Found List
                 </Typography>
+              </CardActionArea>
+              <CardContent style={{ background: "white" }}>
+            <Jumbotron>
+              <h1></h1>
+            </Jumbotron>
+            </CardContent>
+            </Card>
+            <br />
+            <Card className={classes.cardContainer}>
+              <CardActionArea style={{ background: "#bdab00" }}>
+                <Typography variant="h4" style={{textAlign: "center", color: "white", fontFamily: 'Alfa Slab One' }}>
+                  Search Bar
+                  </Typography>
               </CardActionArea>
               <CardContent style={{ background: "white" }}>
             <SearchBar/>
@@ -203,12 +233,10 @@ const LostItems = () => {
           </Col>
         </Row>
       </Container>
-
         
         { /* <Footer /> */ }
         </>
     )
   
 }
-
 export default LostItems
