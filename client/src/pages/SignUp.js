@@ -12,8 +12,8 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-//import Navbar from "../components/Nav/Nav.js";
-//import SignIn from './SignIn.js';
+import Navbar from "../components/Nav/Nav.js";
+import SignIn from './SignIn.js';
 
 
 function Copyright() {
