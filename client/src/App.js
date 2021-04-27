@@ -24,11 +24,7 @@ function App() {
     <Detail/>
   </Route>
   <Route path="/Contact" component={Contact} />
-<<<<<<< HEAD
-  <Route path="/Up" component={Up} /> 
-=======
   <Route path="/Up" component={Up} />
->>>>>>> d8f87d3c806d23f63e1c8041eef2a5d8522748c5
    </>
   );
 }
