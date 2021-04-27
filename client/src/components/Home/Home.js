@@ -41,13 +41,13 @@ const Home = (props) => {
 
             <Navbar />
 
+            <LostItems />
+
             <Card className={classes.cardContainer}>
 
             <MapContainer/>
 
             </Card>
-
-            <LostItems />
 
             <Footer />
 

@@ -12,6 +12,7 @@ import Contact from './components/Contact/Contact.js';
 import SignUp from './components/Up/Up.js';
 import Detail from './components/Detail/Detail.js'
 
+
 function App() {
   return (
     <>
@@ -23,7 +24,7 @@ function App() {
     <Detail/>
   </Route>
   <Route path="/Contact" component={Contact} />
-  <Route path="/Up" component={SignUp} />
+  <Route path="/SignUp" component={SignUp} />
    </>
   );
 }

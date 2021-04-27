@@ -32,12 +32,16 @@ function Copyright() {
   );
 }
 
+//const useStyles = makeStyles({
+  
+
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
     backgroundImage: `url(${Image})`,
-    background: "cover",
-    height: "100%",
-    marginBottom: 0,
+    backgroundPosition: "center center",
+	  backgroundSize: "cover",
+	  height: "900px",
+    //marginBottom: "0px",
   },
   paper: {
     marginTop: theme.spacing(8),
@@ -61,6 +65,8 @@ const useStyles = makeStyles((theme) => ({
       left: "50%",
       width: "50%",
       textAlign: "center",
+      borderColor: "black",
+      borderWidth: "5px",
       transform: "translate(-50%, -50%)",
       position: "absolute",
       paddingTop: "20px",
@@ -68,13 +74,14 @@ const useStyles = makeStyles((theme) => ({
       paddingLeft: "20px",
       paddingRight: "20px", 
   },
+//});
 }));
 
 export default function SignIn() {
   const classes = useStyles();
 
   return (
-    
+    //<Box component="body" >
     <Box component="div" maxWidth="xs" className={classes.mainContainer}>
     <Navbar />
       <CssBaseline />
@@ -147,6 +154,7 @@ export default function SignIn() {
         <Copyright />
       </Box>
     </Box>
+   // </Box>
     
   );
 }
