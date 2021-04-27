@@ -3,7 +3,12 @@ import React, { useState, useEffect }from 'react';
 //import Footer from '../Footer/Footer.js';
 import { 
     Typography,
-    Box
+    Box,
+    Card,
+    CardContent,
+    CardActionArea,
+    CardActions,
+ 
  } from '@material-ui/core';
 import Jumbotron from "../Jumbotron/Jumbotron";
 import API from "../../utils/API";
@@ -13,11 +18,29 @@ import { List, ListItem } from "../List/List";
 import { Input, TextArea, FormBtn } from "../Form/Form";
 import SearchBar from "../Searchbar/Searchbar";
 import axios from "axios";
+import { makeStyles } from "@material-ui/core/styles";
+import { mergeClasses } from '@material-ui/styles';
 
- 
-//import { makeStyles } from "@material-ui/core/styles";
+const useStyles = makeStyles({
+  cardContainer: {
+    background: "black",
+    width: "100%",
+    maxWidth: "275px",
+    marginLeft: "5px",
+    marginRight: "5px",
+    borderWidth: "10px",
+    borderColor: "black",
+    paddingTop: "20px",
+    paddingBottom: "20px", 
+    paddingLeft: "50px",
+    paddingRight: "50px", 
+},
+  cardContent: {
+    background: "black",
+  }
+});
 
-//const useStyles = makeStyles();
+         
 
 const LostItems = () => {
 
@@ -78,20 +101,41 @@ const LostItems = () => {
        }
     };
 
+    const classes = makeStyles();
+
     return (
-        <>
-        { /* <Navbar /> */ }
+
+      <>
+        
         <Box component="div">
-          <Typography variant="h2" style={{textAlign: "center"}}>
+          <Typography variant="h2" style={{textAlign: "center" }}>
              Lost/Found Items
           </Typography>
         </Box>
         <Container fluid>
         <Row>
           <Col size="md-6">
+            <Card className={classes.cardContainer}>
+              <CardActionArea style={{ background: "#eaba00" }}>
+                <Typography variant="h4" style={{textAlign: "center", color: "white" }}>
+              Submit an Item
+                </Typography>
+              </CardActionArea>
+              <CardContent style={{ background: "white" }}>
+
             <Jumbotron>
-              <h1>Summit a item</h1>
+              <h1></h1>
             </Jumbotron>
+            </CardContent>
+            </Card>
+            <br />
+            <Card className={classes.cardContainer}>
+              <CardActionArea style={{ background: "#eaba00" }}>
+                <Typography variant="h5" style={{textAlign: "center", color: "white" }}>
+              Please Add a Description of your Item
+                </Typography>
+              </CardActionArea>
+              <CardContent  style={{ background: "white" }}> 
             <form>
               <Input
                 onChange={handleInputChange}
@@ -118,18 +162,40 @@ const LostItems = () => {
                 name="status"
                 placeholder="Item Status (Required)"
               />
+              <CardActions>
               <FormBtn
                 disabled={!(formObject.author && formObject.item)}
                 onClick={handleFormSubmit}
               >
                 Submit Item
               </FormBtn>
+             </CardActions>
             </form>
+            </CardContent> 
+            </Card>
+            <br />
           </Col>
           <Col size="md-6 sm-12">
+            <Card className={classes.cardContainer}>
+              <CardActionArea style={{ background: "#eaba00" }}>
+                <Typography variant="h4" style={{textAlign: "center", color: "white" }}>
+                 Lost/Found List
+                </Typography>
+              </CardActionArea>
+              <CardContent style={{ background: "white" }}>
             <Jumbotron>
-              <h1>Lost/Found List</h1>
+              <h1></h1>
             </Jumbotron>
+            </CardContent>
+            </Card>
+            <br />
+            <Card className={classes.cardContainer}>
+              <CardActionArea style={{ background: "#eaba00" }}>
+                <Typography variant="h4" style={{textAlign: "center", color: "white" }}>
+                  Search Bar
+                </Typography>
+              </CardActionArea>
+              <CardContent style={{ background: "white" }}>
             <SearchBar/>
             {Items.length ? (
               <List>
@@ -146,6 +212,9 @@ const LostItems = () => {
             ) : (
               <h3>No Results to Display</h3>
             )}
+            </CardContent>
+            </Card>
+            <br/>
           </Col>
         </Row>
       </Container>

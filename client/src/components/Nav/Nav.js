@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import MobilRightMenuSlider from '@material-ui/core/Drawer';
 import Footer from '../Footer/Footer';
 import Logo from "../../utils/img/findit.png";
+import Name from "../../utils/img/finditlogo3.png";
 import { 
     AppBar,  
     Toolbar, 

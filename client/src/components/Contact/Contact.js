@@ -4,6 +4,7 @@ import Footer from '../Footer/Footer.js';
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import { TextField, Typography, Grid, Box, Button, Card } from "@material-ui/core";
 import SendIcon from '@material-ui/icons/Send';
+import Image from '../../utils/img/bgPattern3.jpeg';
 
 const InputField = withStyles({
     root: {
@@ -28,6 +29,13 @@ const InputField = withStyles({
 })(TextField);
 
 const useStyles = makeStyles(theme=>({
+    mainContainer: {
+        backgroundImage: `url(${Image})`,
+        backgroundPosition: "center center",
+        backgroundSize: "cover",
+        height: "775px",
+        //marginBottom: "0px",
+      },
     form: {
         top: "45%",
         left: "50%",
@@ -54,7 +62,7 @@ const Contact = () => {
     
         return (
             <>
-            <Box component="div" style={{ background: "white", height: "100vh"}}>
+            <Box component="div" className={classes.mainContainer}>
             <Navbar />
                 <Grid container justify="center">
                 <Card component="form" className={classes.form}>    
