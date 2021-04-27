@@ -10,6 +10,7 @@ import AboutUs from './components/About/About.js';
 //import LostItems from './components/Lost/Lost.js';
 import Contact from './components/Contact/Contact.js';
 import SignUp from './components/Up/Up.js';
+import Detail from './components/Detail/Detail.js'
 
 
 function App() {
@@ -19,6 +20,9 @@ function App() {
   <Route exact path="/" component={Login} />
   <Route path="/Home" component={Home} />
   <Route path="/AboutUs" component={AboutUs} />
+  <Route exact path ="/items/:id" >
+    <Detail/>
+  </Route>
   <Route path="/Contact" component={Contact} />
   <Route path="/SignUp" component={SignUp} />
    </>
