@@ -17,7 +17,7 @@
     "react-google-maps": "^9.4.5",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.3",
-    "use-position": "^0.0.8"
+    "use-position": "0.0.8"
   },
   "scripts": {
     "start": "react-scripts start",

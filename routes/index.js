@@ -43,7 +43,7 @@ router.get("/testSave", (req, res) => {
   newItem.save();
 })
 
-router.get('/allItems', function(req,res) {
+router.get('/items', function(req,res) {
   Item.find({}, function(err, items) {
     res.json(items)
   })

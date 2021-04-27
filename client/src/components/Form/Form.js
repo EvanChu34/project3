@@ -20,10 +20,12 @@ export function TextArea(props) {
 }
 
 export function FormBtn(props) {
+  console.log("item button pressed")
   return (
     <button {...props} style={{ float: "right", marginBottom: 10 }} className="btn btn-success">
       {props.children}
     </button>
+    
   );
 }
 
