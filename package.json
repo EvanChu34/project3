@@ -33,6 +33,7 @@
     "mongoose": "^5.12.5",
     "react-google-maps": "^9.4.5",
     "react-hook-form": "^7.2.3",
-    "react-toastify": "^7.0.4"
+    "react-toastify": "^7.0.4",
+    "use-position": "0.0.8"
   }
 }

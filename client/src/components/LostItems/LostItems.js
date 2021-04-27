@@ -135,7 +135,7 @@ const LostItems = () => {
               <List>
                 {Items.map(Item => (
                   <ListItem key={Item._id}>
-                    <Link to={"/report/" + Item._id}>
+                    <Link to={"/items/" + Item._id}>
                       <strong>
                         {Item.item} : {Item.author} : {Item.status}
                       </strong>
