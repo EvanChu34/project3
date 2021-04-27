@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 function SearchBar(props){
     return(
-        <form action="/" method="get">
+        <form action="/Home" method="get">
         <label htmlFor="header-search">
             <span className="visually-hidden">Search Items</span>
         </label>
