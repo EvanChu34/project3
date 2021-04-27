@@ -1,56 +1,4 @@
 import React from 'react';
-//import Navbar from '../Nav/Nav.js';
-//import Footer from '../Footer/Footer.js';
-import SignIn from '../../pages/SignIn.js';
-import { Box, Card } from '@material-ui/core';
-import { makeStyles } from "@material-ui/core/styles";
-import Image from "../../utils/img/bgPattern1.jpg";
-
-const useStyles = makeStyles({
-    mainContainer: {
-      //background: "gray",
-      backgroundImage: `url(${Image})`,
-        //height: "100%",
-    },
-    card: {
-      marginTop: "25%",
-      marginBottom: "25%",
-      left: "50%",
-      width: "50%",
-      textAlign: "center",
-      transform: "translate(-50%, -50%)",
-      position: "absolute",
-      paddingTop: "20px",
-      paddingBottom: "20px", 
-      paddingLeft: "20px",
-      paddingRight: "20px", 
-  },
-  })
-
-const Login = (props) => {
-
-    const classes = useStyles();
-
-    return (
-    <Box component="body" className={classes.mainContainer}>
-
-
-        <Card className={classes.card}>
-
-            <SignIn />
-
-        </Card>
-
-
-    </Box> 
-    )
-}
-
-export default Login
-
-
-/*
-import React from 'react';
 import { Avatar,
          Button,
          CssBaseline,
@@ -67,7 +15,7 @@ import Navbar from "../Nav/Nav.js";
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import { makeStyles } from '@material-ui/core/styles';
 import Image from '../../utils/img/bgPattern1.jpg'; 
-//import SignUp from '../../pages/SignUp.js';
+import SignUp from '../../pages/SignUp.js';
 
 
 
@@ -202,6 +150,63 @@ export default function SignIn() {
     
   );
 }
+
+
+
+
+
+/*
+import React from 'react';
+import Navbar from '../Nav/Nav.js';
+//import Footer from '../Footer/Footer.js';
+import SignIn from '../../pages/SignIn.js';
+import { Box, Card } from '@material-ui/core';
+import { makeStyles } from "@material-ui/core/styles";
+import Image from "../../utils/img/bgPattern1.jpg";
+
+const useStyles = makeStyles({
+    mainContainer: {
+      //background: "gray",
+      backgroundImage: `url(${Image})`,
+        //height: "100%",
+    },
+    card: {
+      marginTop: "25%",
+      marginBottom: "25%",
+      left: "50%",
+      width: "50%",
+      textAlign: "center",
+      transform: "translate(-50%, -50%)",
+      position: "absolute",
+      paddingTop: "20px",
+      paddingBottom: "20px", 
+      paddingLeft: "20px",
+      paddingRight: "20px", 
+  },
+  })
+
+const Login = (props) => {
+
+    const classes = useStyles();
+
+    return (
+    <Box component="body" className={classes.mainContainer}>
+
+    <Navbar />
+        <Card className={classes.card}>
+
+            <SignIn />
+
+        </Card>
+
+
+    </Box> 
+    )
+}
+
+export default Login
+
+*/
 
 
 

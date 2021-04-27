@@ -105,7 +105,7 @@ function Copyright() {
               <Grid item>
               <Link> 
                 <a 
-                href={"./Up"} 
+                href={"../components/Up/Up.js"} 
                 variant="body2">
                 {"Don't have an account? Sign Up!"}
                 </a>
