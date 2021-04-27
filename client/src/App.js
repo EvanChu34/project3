@@ -9,7 +9,7 @@ import Home from './components/Home/Home.js';
 import AboutUs from './components/About/About.js';
 //import LostItems from './components/Lost/Lost.js';
 import Contact from './components/Contact/Contact.js';
-import SignUp from './components/Up/Up.js';
+import Up from './components/Up/Up.js';
 import Detail from './components/Detail/Detail.js'
 
 
@@ -24,7 +24,7 @@ function App() {
     <Detail/>
   </Route>
   <Route path="/Contact" component={Contact} />
-  <Route path="/SignUp" component={SignUp} />
+  <Route path="/Up" component={Up} />
    </>
   );
 }
