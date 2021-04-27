@@ -15,7 +15,7 @@ import Navbar from "../Nav/Nav.js";
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import { makeStyles } from '@material-ui/core/styles';
 import Image from '../../utils/img/bgPattern1.jpg'; 
-import SignUp from '../../pages/SignUp.js';
+import Up from '../Up/Up.js';
 import Footer from '../Footer/Footer.js';
 
 

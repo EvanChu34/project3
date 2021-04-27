@@ -5,7 +5,12 @@ import Footer from "../Footer/Footer.js";
 import MapContainer from '../Map/Map.js';
 import Image from "../../utils/img/bgOption3.jpeg";
 import { makeStyles } from "@material-ui/core/styles";
-import {  Box, Card } from "@material-ui/core";
+import {  Box,
+          Card, 
+          CardActionArea,
+          CardContent, 
+          Typography, 
+        } from "@material-ui/core";
 
 const useStyles = makeStyles({
     mainContainer: {
@@ -14,17 +19,19 @@ const useStyles = makeStyles({
     },
     cardContainer: {
         //background: "#1976d2",
-        background: "black",
-        width: "80%",
+        background: "white",
+        width: "90%",
         maxWidth: "345",
-        margin: "3rem",
-        margin: "5rem auto",
+        marginLeft: "4rem",
+        marginRight: "2rem",
         borderWidth: "10px",
         borderColor: "black",
-        paddingTop: "20px",
+        paddingTop: "0px",
         paddingBottom: "20px", 
-        paddingLeft: "50px",
-        paddingRight: "50px",  
+        paddingLeft: "0px",
+        paddingRight: "0px", 
+        marginBottom: "25px",
+        align: "center", 
     },
     cardContent: {
         background: "gray",
@@ -44,9 +51,14 @@ const Home = (props) => {
             <LostItems />
 
             <Card className={classes.cardContainer}>
-
-            <MapContainer/>
-
+              <CardActionArea style={{ background: "#eaba00" }}>
+                <Typography variant="h3" style={{textAlign: "center", color: "white" }}>
+                Locate Your Item!
+                </Typography>
+              </CardActionArea>
+              <CardContent style={{ background: "white" }}>
+                <MapContainer/>
+              </CardContent>
             </Card>
 
             <Footer />
