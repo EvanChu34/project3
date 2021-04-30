@@ -9,9 +9,9 @@ function Detail(props) {
 
   // When this component mounts, grab the Item with the _id of props.match.params.id
   // e.g. localhost:3000/Items/599dcb67f0f16317844583fc
-  const {id} = useParams()
+  const {_id} = useParams()
   useEffect(() => {
-    API.getItem(id)
+    API.getItem(_id)
       .then(res => setItem(res.data))
       .catch(err => console.log(err));
   }, [])
