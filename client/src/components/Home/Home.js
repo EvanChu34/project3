@@ -11,13 +11,13 @@ import {  Box,
           CardContent, 
           Typography, 
         } from "@material-ui/core";
-import "@fontsource/monoton" // Defaults to weight 400.
-import "@fontsource/righteous" // Defaults to weight 400.
-import "@fontsource/acme" // Defaults to weight 400.
-import "@fontsource/exo-2" // Defaults to weight 400.
+//import "@fontsource/monoton" // Defaults to weight 400.
+//import "@fontsource/righteous" // Defaults to weight 400.
+//import "@fontsource/acme" // Defaults to weight 400.
+//import "@fontsource/exo-2" // Defaults to weight 400.
 //import "@fontsource/exo-2/500.css" // Weight 500.
 //import "@fontsource/exo-2/900-italic.css" // Italic variant.
-import "@fontsource/monoton"; // Defaults to weight 400
+//import "@fontsource/monoton"; // Defaults to weight 400
 
 const FindItFont = createMuiTheme({
   typography: {
