@@ -123,21 +123,25 @@ const LostItems = () => {
              Lost & Found Items
           </Typography>
         </Box>
-        
         <Container fluid>
         <Row>
           <Col size="md-6">
-            <Card className={classes.cardContainer}>
-              <CardActionArea style={{ background: "#bdab00" }}>
-                <Typography variant="h4" style={{textAlign: "center", color: "white", fontFamily: 'Alfa Slab One'}}>
-              Submit an Item
-                </Typography>
-              </CardActionArea>
 
-              <CardContent style={{ background: "white" }}>
+         {/*    
+          <Card className={classes.cardContainer}>
+            <CardActionArea style={{ background: "#bdab00" }}>
+              <Typography variant="h4" style={{textAlign: "center", color: "white", fontFamily: 'Alfa Slab One'}}>
+              Submit an Item
+              </Typography>
+            </CardActionArea>
+            <CardContent style={{ background: "white" }}> 
+            */}
+
             <Jumbotron>
-              <h1></h1>
+              <h1>Submit an Item</h1>
             </Jumbotron>
+
+            { /*
             </CardContent>
             </Card>
             <br />
@@ -147,8 +151,9 @@ const LostItems = () => {
               Please Add a Description of your Item
                 </Typography>
               </CardActionArea>
+              <CardContent  style={{ background: "white" }}>
+               */ }
 
-              <CardContent  style={{ background: "white" }}> 
             <form>
               <Input
                 onChange={handleInputChange}
@@ -175,32 +180,38 @@ const LostItems = () => {
                 name="status"
                 placeholder="Item Status (Required)"
               />
-              <CardActions>
               <FormBtn
                 disabled={!(formObject.author && formObject.item)}
                 onClick={handleFormSubmit}
               >
                 Submit Item
               </FormBtn>
-             </CardActions>
+
+              { /* <CardActions>
+             </CardActions> */ }
             </form>
-            </CardContent> 
+            { /* </CardContent> 
             </Card>
-            <br/>
+            <br/> */ }
+
           </Col>
           <Col size="md-6 sm-12">
+
+          { /*
             <Card className={classes.cardContainer}>
-
-
             <CardActionArea style={{ background: "#bdab00" }}>
                 <Typography variant="h4" style={{textAlign: "center", color: "white", fontFamily: 'Alfa Slab One' }}>
                  Lost/Found List
                 </Typography>
               </CardActionArea>
               <CardContent style={{ background: "white" }}>
+          */ }
+
             <Jumbotron>
-              <h1></h1>
+              <h1>Lost/Found List</h1>
             </Jumbotron>
+
+          { /* 
             </CardContent>
             </Card>
             <br />
@@ -211,6 +222,8 @@ const LostItems = () => {
                   </Typography>
               </CardActionArea>
               <CardContent style={{ background: "white" }}>
+               */} 
+
             <SearchBar/>
             {Items.length ? (
               <List>
@@ -227,14 +240,16 @@ const LostItems = () => {
             ) : (
               <h3>No Results to Display</h3>
             )}
+
+            { /*
             </CardContent>
             </Card>
             <br/>
+          */ }
+
           </Col>
         </Row>
       </Container>
-        
-        { /* <Footer /> */ }
         </>
     )
   
